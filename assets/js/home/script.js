@@ -106,13 +106,16 @@ function direita_depoimento() {
     if (depoimentoContador == depoimentos.length) {
         depoimentoContador = 0;
     }
-    console.log(depoimentoContador)
-        // const urlImg = 'assets/img/home/depoimentos/' + depoimentos[depoimentoContador].img;
-        // console.log(urlImg)
+    // console.log(depoimentoContador)
+    // const urlImg = 'assets/img/home/depoimentos/' + depoimentos[depoimentoContador].img;
+    // console.log(urlImg)
     document.getElementById("depoimentofoto").setAttribute('src', 'assets/img/home/depoimentos/' + depoimentos[depoimentoContador].img)
     document.getElementById("depoimentotexto").innerHTML = depoimentos[depoimentoContador].depoimento;
     document.getElementById("depoimentonome").innerHTML = depoimentos[depoimentoContador].nome;
     document.getElementById("depoimentocargo").innerHTML = depoimentos[depoimentoContador].cargo;
+
+    caixa.style.animation = "";
+    setTimeout(() => caixa.style.animation = "deslizar 2s linear", );
 }
 
 function esquerda_depoimento() {
@@ -120,10 +123,31 @@ function esquerda_depoimento() {
     if (depoimentoContador < 0) {
         depoimentoContador = depoimentos.length - 1;
     }
-    console.log(depoimentoContador)
+    // console.log(depoimentoContador)
     document.getElementById("depoimentofoto").setAttribute('src', 'assets/img/home/depoimentos/' + depoimentos[depoimentoContador].img)
     document.getElementById("depoimentotexto").innerHTML = depoimentos[depoimentoContador].depoimento;
     document.getElementById("depoimentonome").innerHTML = depoimentos[depoimentoContador].nome;
     document.getElementById("depoimentocargo").innerHTML = depoimentos[depoimentoContador].cargo;
+
+    caixa.style.animation = "";
+    setTimeout(() => caixa.style.animation = "deslizar 2s linear", );
 }
+// animação depoimento
+const caixa = document.querySelector("#animacao-depoimento");
+
 //! trocar depoimento
+
+// pegar posts blog
+function loadPosts() {
+    fetch('http://parcasfoundation.com.br/wp-json/wp/v2/posts?per_page=3', { mode: 'cors', credentials: 'include' })
+        .then(function(resultado) {
+            return resultado.json();
+        })
+        .then(function(json) {
+            console.log("resultado: " + json)
+        })
+        .catch(function(erro) {
+            console.log("erro: " + erro)
+        })
+}
+//! pegar posts blog
