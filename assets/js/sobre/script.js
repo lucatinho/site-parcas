@@ -2,22 +2,22 @@
 
 const scrollWheel = event => {
         if (event.deltaY < 0) {
-            event.target.scrollBy(300, 0)
+            event.target.scrollBy(285, 0)
         } else {
-            event.target.scrollBy(-300, 0)
+            event.target.scrollBy(-285, 0)
         }
     }
     // mudar valores quando adicionar mais imagens
 let qtdImagem = 8;
 let qtdFixaImagem = 4;
 let num1 = qtdImagem - qtdFixaImagem;
-let scrollValue = num1 * 300;
+let scrollValue = num1 * 285;
 
 let count = 0
 
 setInterval(function() {
 
-    count += 300
+    count += 285
     if (count > scrollValue) count = 0
     document.querySelector(".items").scrollTo(count, 0)
 
@@ -39,7 +39,7 @@ setInterval(function() {
 }, 3000)
 
 function esquerda() {
-    count -= 300
+    count -= 285
     if (count < 0) count = scrollValue
     document.querySelector(".items").scrollTo(count, 0)
     if (scrollValue / 2 > count) {
@@ -60,7 +60,7 @@ function esquerda() {
 }
 
 function direita() {
-    count += 300
+    count += 285
     if (count > scrollValue) count = 0
     document.querySelector(".items").scrollTo(count, 0)
     if (scrollValue / 2 > count) {
@@ -92,6 +92,7 @@ function direita() {
 // })
 
 // ! envento do bloco 2 - carrossel
+
 
 // trocar depoimento
 var depoimentoContador = 0;
@@ -139,18 +140,3 @@ function esquerda_depoimento() {
 const caixa = document.querySelector("#animacao-depoimento");
 
 //! trocar depoimento
-
-// pegar posts blog
-function loadPosts() {
-    fetch('http://parcasfoundation.com.br/wp-json/wp/v2/posts?per_page=3', { mode: 'cors', credentials: 'include' })
-        .then(function(resultado) {
-            return resultado.json();
-        })
-        .then(function(json) {
-            console.log("resultado: " + json)
-        })
-        .catch(function(erro) {
-            console.log("erro: " + erro)
-        })
-}
-//! pegar posts blog

@@ -14,6 +14,31 @@ body {
 
 /* bloco 1 */
 
+.text-bloco-1 {
+    height: 100%;
+    width: 50%;
+}
+
+.img-background {
+    height: 100%;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/home/pexels-anni-roenkae-2832382.png");
+    background-position: right;
+}
+
+.nav-contato {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+@media only screen and (min-width: 992px) {
+    .contato-none {
+        display: none;
+    }
+}
+
 .bloco_home {
     height: 100vh;
     /* max-height: 950px; */
@@ -22,18 +47,6 @@ body {
     flex-direction: row;
     flex-grow: 3;
     /* max-width: 1140px !important; */
-}
-
-.img-home-col {
-    background-image: url("../img/home/pexels-anni-roenkae-2832382.png");
-    flex-grow: 3;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    /* position: absolute;
-    left: 650px;
-    width: 1000px;
-    height: 1000px; */
 }
 
 .coluna-home {
@@ -92,9 +105,9 @@ body {
     text-align: left;
     font-style: normal;
     font-weight: 600;
-    font-size: 3.5rem;
+    font-size: 3rem;
     padding-bottom: 3.5rem;
-    line-height: 3.6rem;
+    line-height: 3rem;
 }
 
 .subtitulo-home {
@@ -181,7 +194,19 @@ body {
     text-decoration: none !important;
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 992px) {
+    .nav-contato {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .img-background {
+        background-image: none;
+    }
+    .nav-contato {
+        display: none;
+    }
     .bloco_home {
         margin-bottom: 0px;
     }
@@ -189,7 +214,7 @@ body {
         min-width: 360px;
     }
     .coluna-home .nav {
-        flex-wrap: nowrap
+        /* flex-wrap: nowrap */
     }
     .img-home-col {
         display: none !important;
@@ -199,9 +224,6 @@ body {
         line-height: 40px !important;
         font-size: 2rem !important;
     }
-    .coluna-home {
-        /* min-width: 700px; */
-    }
     .text-home {
         font-size: 1.5rem;
     }
@@ -209,6 +231,14 @@ body {
 
 
 /* !bloco 1*/
+
+.titulo-entreblocos {
+    font-size: 45px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: #5653fd;
+    font-weight: 600;
+}
 
 
 /* bloco 2 */
@@ -227,6 +257,7 @@ body {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
+    margin-bottom: 50px;
 }
 
 .item {
@@ -400,7 +431,8 @@ body {
 
 .img-bloco4 {
     display: flex;
-    height: 150%;
+    padding-top: 70px;
+    /* height: 250%; */
 }
 
 .img-teclado {
@@ -522,12 +554,19 @@ body {
 /* !bloco 5 */
 
 
+/* carrossel */
+
+.bloco-na-midia {
+    margin-bottom: 100px;
+}
+
+
 /* bloco 6 */
 
 .bloco-6 {
     padding-top: 50px;
     margin-bottom: 100px;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -537,7 +576,7 @@ body {
     text-align: center;
     font-weight: 800;
     font-size: 45px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .sessao-iframe {
@@ -682,6 +721,7 @@ body {
 .person-principal img {
     height: 190px;
     width: 190px;
+    border-radius: 120px;
 }
 
 .person-text {
@@ -749,8 +789,8 @@ body {
         /* display: flex; */
         /* flex-direction: column; */
         /* justify-content: center; */
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
     .aspas svg {
         height: 30px;
@@ -805,7 +845,7 @@ body {
 
 .sessao-formas {
     width: 113%;
-    height: 500px;
+    height: 550px;
     background-image: url("../img/home/jr-korpa-9XngoIpxcEo-unsplash.png");
     display: flex;
     justify-content: space-between
@@ -815,7 +855,8 @@ body {
 .forma2,
 .forma3 {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    width: 100%;
 }
 
 .forma1 a,
@@ -905,12 +946,17 @@ body {
     margin-left: 40px;
 }
 
+.card img {
+    max-height: 180px;
+}
+
 .card .card-title {
     font-weight: 600;
 }
 
 .card p {
     color: #4b4a4a;
+    line-height: 23px;
 }
 
 .card a {
