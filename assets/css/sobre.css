@@ -98,6 +98,12 @@ body {
     font-weight: 600;
     display: flex;
     justify-content: center;
+    padding-bottom: 5px;
+}
+
+.titulo-bloco-1 h7 {
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -351,10 +357,23 @@ body {
     box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.1);
 }
 
+.carousel-item .row {
+    height: 460px !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 80px !important;
+}
+
 .person-card {
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 10px;
+    margin: 20px;
+    height: 90%;
 }
 
 .person-card img {
@@ -373,7 +392,9 @@ body {
 }
 
 .person-card p {
+    text-align: center;
     padding-bottom: 30px;
+    color: black;
 }
 
 .icons-social {

@@ -8,7 +8,7 @@ const scrollWheel = event => {
         }
     }
     // mudar valores quando adicionar mais imagens
-let qtdImagem = 8;
+let qtdImagem = 28;
 let qtdFixaImagem = 4;
 let num1 = qtdImagem - qtdFixaImagem;
 let scrollValue = num1 * 300;
@@ -21,19 +21,21 @@ setInterval(function() {
     if (count > scrollValue) count = 0
     document.querySelector(".items").scrollTo(count, 0)
 
-    if (scrollValue / 2 > count) {
+    var trocapreenchimento = scrollValue /3;
+
+    if (trocapreenchimento > count) {
         document.getElementById("preencimento1").setAttribute('d', 'M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z')
         document.getElementById("preencimento2").setAttribute('d', '')
         document.getElementById("preencimento3").setAttribute('d', '')
 
-    } else if (scrollValue / 2 < count) {
-        document.getElementById("preencimento1").setAttribute('d', '')
-        document.getElementById("preencimento2").setAttribute('d', '')
-        document.getElementById("preencimento3").setAttribute('d', 'M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z')
-    } else {
+    } else if (trocapreenchimento * 2 > count) {
         document.getElementById("preencimento1").setAttribute('d', '')
         document.getElementById("preencimento2").setAttribute('d', 'M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z')
         document.getElementById("preencimento3").setAttribute('d', '')
+    } else {
+        document.getElementById("preencimento1").setAttribute('d', '')
+        document.getElementById("preencimento2").setAttribute('d', '')
+        document.getElementById("preencimento3").setAttribute('d', 'M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z')
     }
     // console.log('moveu', count)
 }, 3000)
