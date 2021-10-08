@@ -692,9 +692,8 @@ body {
     justify-content: space-between
 }
 
-.footer .espaco {
-    min-height: 140px;
-    min-width: 260px;
+.footer .esqueda-footer {
+    margin-left: 15px;
 }
 
 .titulo-footer {

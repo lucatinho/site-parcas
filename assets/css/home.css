@@ -253,7 +253,7 @@ body {
 
 .bloco-2-card {
     /* width: 100vh; */
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     justify-content: space-around
 }
 
@@ -329,6 +329,17 @@ body {
 
 /*! bloco 2 */
 
+/* ariba */
+.ariba-box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+  
+}
+.ariba-box img{
+    width: 200px;
+}
+/* !ariba */
 
 /* bloco 3 */
 
@@ -1018,9 +1029,13 @@ body {
     justify-content: space-between
 }
 
-.bloco-10 .espaco {
+/* .bloco-10 .espaco {
     min-height: 140px;
     min-width: 260px;
+} */
+
+.bloco-10 .esqueda-footer {
+    margin-left: 15px;
 }
 
 .titulo-bloco10 {
